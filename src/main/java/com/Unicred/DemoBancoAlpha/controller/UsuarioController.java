@@ -23,6 +23,10 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
+    @GetMapping("/buscar/{id}")
+    public List<Usuario> buscarPorId(@PathVariable Integer id){
+        return usuarioService.buscarPorId(id);
+    }
 
     @GetMapping("/todos")
     public List<Usuario> buscarTodos(){

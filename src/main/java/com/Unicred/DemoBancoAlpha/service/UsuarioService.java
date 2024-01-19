@@ -6,6 +6,7 @@ import com.Unicred.DemoBancoAlpha.repository.UsuariosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +23,10 @@ public class UsuarioService {
 
     public List<Usuario> buscarTodos() {
         return this.usuariosRepository.findAll();
+    }
+
+    public List<Usuario> buscarPorId(Integer id){
+        return this.usuariosRepository.findAllById(Collections.singleton(id));
     }
 
     public Optional<Usuario> findByEmail(String email) {

@@ -17,7 +17,7 @@ public class EmailController {
     }
 
     @PostMapping("/recebido")
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(methods = {RequestMethod.OPTIONS, RequestMethod.POST})
     public void sendEmail(@RequestBody Email email){
         emailService.sendEmail(email);
     }

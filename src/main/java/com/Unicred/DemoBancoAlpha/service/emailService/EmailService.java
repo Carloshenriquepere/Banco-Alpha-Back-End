@@ -16,7 +16,7 @@ public class EmailService {
 
     public void sendEmail(Email email){
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("noreply@gmail.com");
+        message.setFrom("bancoalpha@gmail.com");
         message.setTo(email.to());
         message.setSubject(email.subject());
         message.setText(email.body());
