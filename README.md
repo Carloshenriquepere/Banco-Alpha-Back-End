@@ -1,8 +1,4 @@
-# Banco-Alpha-Back-End
-
----
-
-# Projeto Fullstack de Cadastro e Login
+# Projeto Fullstack de Cadastro e Login Banco Alpha
 
 Bem-vindo ao meu projeto fullstack de cadastro e login! Este projeto é composto por um frontend desenvolvido em HTML5, Bootstrap, Axios e JavaScript, e um backend construído com Java, Spring (Spring Web, Spring Security), usando H2 Database para armazenamento.
 
