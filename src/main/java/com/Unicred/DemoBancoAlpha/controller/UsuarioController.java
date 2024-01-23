@@ -27,6 +27,10 @@ public class UsuarioController {
     public List<Usuario> buscarPorId(@PathVariable Integer id){
         return usuarioService.buscarPorId(id);
     }
+    @GetMapping("/buscarEmail/{email}")
+    public List<Usuario> buscarPorLogin(@PathVariable String email){
+        return usuarioService.buscarPorLogin(email);
+    }
 
     @GetMapping("/todos")
     public List<Usuario> buscarTodos(){

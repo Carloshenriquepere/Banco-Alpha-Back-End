@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -31,5 +32,12 @@ public class UsuarioService {
 
     public Optional<Usuario> findByEmail(String email) {
         return this.usuariosRepository.findByEmail(email);
+    }
+
+    public List<Usuario> buscarPorLogin(String email) {
+        return this.usuariosRepository.findAll()
+                .stream()
+                .filter(usuario -> usuario.getEmail().equalsIgnoreCase(email))
+                .collect(Collectors.toList());
     }
 }
